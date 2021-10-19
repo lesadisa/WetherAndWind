@@ -17,8 +17,8 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 import org.koin.core.component.KoinComponent
 
 class WeatherScreenActivity : AppCompatActivity(), KoinComponent {
-    val weatherScreenViewModel by viewModel<WeatherScreenViewModel>()
-    val cityScreenViewModel by viewModel<CityScreenViewModel>()
+    private val weatherScreenViewModel by viewModel<WeatherScreenViewModel>()
+    private val cityScreenViewModel by viewModel<CityScreenViewModel>()
     private val binding: ActivityWeatherBinding by viewBinding(ActivityWeatherBinding::bind)
     var city: String = "Moscow"
     var speed: Double = 0.0
