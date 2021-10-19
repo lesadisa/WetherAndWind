@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">WetherAndWind</string>
+    <string name="settings">Settings</string>
+    <string name="weather">Weather</string>
+    <string name="temperature">Temperature %.1f</string>
+    <string name="humidity">Humidity %d</string>
+    <string name="temperature_max">Temperature maximum %.1f</string>
+    <string name="temperature_min">Temperature minimum %.1f</string>
+    <string name="speed">Speed %.1f</string>
+    <string name="degree">Degree %d</string>
 </resources>
