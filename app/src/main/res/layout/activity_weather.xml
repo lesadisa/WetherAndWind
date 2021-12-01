@@ -25,39 +25,95 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
-        android:id="@+id/tvTempeture"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="120dp"
+        android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tilCity"
-        tools:text="Temperature 27.5" />
+        app:layout_constraintTop_toBottomOf="@+id/tilCity">
 
-    <TextView
-        android:id="@+id/tvHumidity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="@+id/tvTempeture"
-        app:layout_constraintTop_toBottomOf="@+id/tvTempeture"
-        tools:text="Humidity 40" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_if_weather_temp" />
 
-    <TextView
-        android:id="@+id/tvTempMax"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="@+id/tvHumidity"
-        app:layout_constraintTop_toBottomOf="@id/tvHumidity"
-        tools:text="Temperature max 27.5" />
+        <TextView
+            android:id="@+id/tvTempeture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="50dp"
+            tools:text="Temperature 27.5" />
+    </LinearLayout>
 
-    <TextView
-        android:id="@+id/tvTempMin"
-        android:layout_width="wrap_content"
+
+    <LinearLayout
+        android:id="@+id/ll2"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="@+id/tvTempMax"
-        app:layout_constraintTop_toBottomOf="@+id/tvTempMax"
-        tools:text="Temperature min 27.5" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll1">
+
+        <ImageView
+            android:layout_width="67dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_humidity" />
+
+        <TextView
+            android:id="@+id/tvHumidity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="50dp"
+            tools:text="Humidity 40" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/ll2"
+        app:layout_constraintTop_toBottomOf="@id/ll2">
+
+        <ImageView
+            android:layout_width="67dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_iconfinder_temperature_plus" />
+
+        <TextView
+            android:id="@+id/tvTempMax"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="50dp"
+            tools:text="Temperature max 27.5" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/ll3"
+        app:layout_constraintTop_toBottomOf="@+id/ll3">
+
+        <ImageView
+            android:layout_width="67dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_iconfinder_temperature_minus" />
+
+        <TextView
+            android:id="@+id/tvTempMin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="50dp"
+            tools:text="Temperature min 27.5"
+
+            />
+    </LinearLayout>
 
     <Button
         android:id="@+id/bWind"
@@ -67,5 +123,6 @@
         android:layout_marginBottom="50dp"
         android:text="Wind"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll4" />
 </androidx.constraintlayout.widget.ConstraintLayout>

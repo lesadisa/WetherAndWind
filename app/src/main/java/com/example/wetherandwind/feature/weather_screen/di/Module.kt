@@ -15,7 +15,8 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 const val BASE_URL = "https://api.openweathermap.org/"
 val appModule = module {
-    single<OkHttpClient> (named("http1")){
+
+single<OkHttpClient> (named("http1")){
         OkHttpClient.Builder()
             .build()
     }
